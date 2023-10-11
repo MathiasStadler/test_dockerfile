@@ -1,4 +1,5 @@
 FROM ubuntu:23.10
-RUN apt-get update && apt-get install -y wget bzip2 && rm -rf /var/lib/apt/lists/*
+RUN apt-get install -y wget 
+RUN rm -rf /var/lib/apt/lists/*
 RUN wget -O hallo.tar.bz2 --content-disposition "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US"
 RUN tar -xvjf hallo.tar.bz2
